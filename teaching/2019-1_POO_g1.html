@@ -179,11 +179,11 @@ https://docs.oracle.com/javase/8/docs/api/index.html
          </td>
          <td>
          	<ul>
-         		<li><a name="05/20/2019" href="http://argouml.tigris.org/">Download ArgoUML </a> </li>
-         		<li><a name="05/20/2019" href="https://www.youtube.com/watch?v=DDLR0NKLkZE">Tutorial-01 ArgoUML</a></li>
-         		<li><a name="05/20/2019" href="https://www.youtube.com/watch?v=3KwD1yd9e0I">Tutorial-02 ArgoUML</a></li>
-         		<li><a name="05/20/2019" href="https://drive.google.com/file/d/1ziohR2JR3c9w7cN4QQeiGZNH_3vk7_ad/view?usp=sharing">IDE ECLIPSE Luna papyrus</a></li>
-         		<li><a name="05/23/2019" href="https://hpaucar.files.wordpress.com/2019/05/listapoo-clases-y-objetos.pdf">Lista de Ejercicios Clases y Objetos</a></li>
+         		<li><a href="http://argouml.tigris.org/">Download ArgoUML <span name="05/20/2019"></span></a> </li>
+         		<li><a href="https://www.youtube.com/watch?v=DDLR0NKLkZE">Tutorial-01 ArgoUML<span name="05/20/2019"></span></a></li>
+         		<li><a href="https://www.youtube.com/watch?v=3KwD1yd9e0I">Tutorial-02 ArgoUML<span name="05/20/2019"></span></a></li>
+         		<li><a href="https://drive.google.com/file/d/1ziohR2JR3c9w7cN4QQeiGZNH_3vk7_ad/view?usp=sharing">IDE ECLIPSE Luna papyrus<span name="05/20/2019"></span></a></li>
+         		<li><a href="https://hpaucar.files.wordpress.com/2019/05/listapoo-clases-y-objetos.pdf">Lista de Ejercicios Clases y Objetos<span name="05/23/2019"></span></a></li>
          	</ul>
 
          </td>
@@ -303,20 +303,20 @@ https://docs.oracle.com/javase/8/docs/api/index.html
 	</footer>
 	
 	<script>
-			const list = document.getElementsByTagName("a");
-		    var today = new Date();
-		    var oldDay, timeDiff, diffDays;
-		    for(var i=0;i<list.length;i++){
-		    	oldDay = new Date(list[i].name);        
-		        // time difference
-		        timeDiff = Math.abs(today.getTime() - oldDay.getTime());
-		        // days difference
-		        diffDays = Math.abs(Math.ceil(timeDiff / (1000 * 3600 * 24)));
-		         
-		    	if(diffDays<10){
-		        	list[i].innerHTML= "<mark>".concat(list[i].innerHTML).concat("</mark>");
-		        }
-		    }		  	
+		const list = document.getElementsByTagName("span");
+	    var today = new Date();
+	    var oldDay, timeDiff, diffDays;
+	    for(var i=0;i<list.length;i++){
+	    	oldDay = new Date(list[i].title);        
+	        // time difference
+	        timeDiff = Math.abs(today.getTime() - oldDay.getTime());
+	        // days difference
+	        diffDays = Math.abs(Math.ceil(timeDiff / (1000 * 3600 * 24)));
+	         
+	    	if(diffDays<10){
+	        	list[i].innerHTML= list[i].innerHTML.concat("<span class='blink'><mark>new</mark></span>");
+	        }
+	    }	  	
 	</script>
 
 
