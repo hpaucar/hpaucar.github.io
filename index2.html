@@ -1,1 +1,18 @@
-<h2>This is my file number two 2</h2>
+<!DOCTYPE html>
+<html>
+<script src="jquery.min.js"></script>
+<script>
+  $(function(){
+    var includes = $('[data-include]');
+    jQuery.each(includes, function(){
+      var file = $(this).data('include') + '.html';
+      $(this).load(file);
+    });
+  });
+</script>
+
+<div data-include="header"></div>
+<div data-include="footer"></div>
+
+</html>
+
